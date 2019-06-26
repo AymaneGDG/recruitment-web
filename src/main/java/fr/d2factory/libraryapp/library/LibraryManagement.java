@@ -47,7 +47,7 @@ public class LibraryManagement implements Library {
 			return null;
 		}
 		else if (bookRepository.findBook(isbnCode) == null) {
-			throw new HasLateBooksException();
+			throw new HasLateBooksException("This member has being late for returning a book");
 		}
 		else {
 			return null;
